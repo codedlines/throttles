@@ -1,5 +1,5 @@
 {
-  "name": "throttles",
+  "name": "@coded-lines/throttles",
   "version": "0.1.0",
   "description": "React native services and components library",
   "main": "lib/commonjs/index",
@@ -34,13 +34,6 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/Armageddonas/throttles",
-  "author": "armageddonas <icsd11175@icsd.aegean.gr> (https://github.com/Armageddonas)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Armageddonas/throttles/issues"
-  },
-  "homepage": "https://github.com/Armageddonas/throttles#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",
@@ -93,7 +86,7 @@
       "publish": true
     },
     "github": {
-      "release": true
+      "release": false
     },
     "plugins": {
       "@release-it/conventional-changelog": {
