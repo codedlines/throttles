@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Results: {result}</Text>
     </View>
   );
 }

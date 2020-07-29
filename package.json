@@ -34,13 +34,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/Armageddonas/throttles",
+  "repository": "https://github.com/codedlines/throttles",
   "author": "armageddonas <icsd11175@icsd.aegean.gr> (https://github.com/Armageddonas)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Armageddonas/throttles/issues"
+    "url": "https://github.com/codedlines/throttles/issues"
   },
-  "homepage": "https://github.com/Armageddonas/throttles#readme",
+  "homepage": "https://github.com/codedlines/throttles#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",
@@ -85,10 +85,6 @@
     ]
   },
   "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
     "npm": {
       "publish": true
     },
