@@ -30,6 +30,22 @@ Toast.showToastShortCenter('message');
 Toast.showToastLongCenter('message');
 ```
 
+### Terms and conditions
+```js
+import { TermsAndConditions } from '@coded-lines/throttles';
+
+// ...
+
+function TnC() {
+  return (
+    <TermsAndConditions
+      text={TERMS_AND_CONDITIONS}
+      onAccept={() => console.log('ok')}
+    />
+  );
+}
+```
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
