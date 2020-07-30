@@ -89,13 +89,13 @@
     "git": {
       "commitMessage": "chore: release ${version}",
       "tagName": "v${version}",
-      "requireCleanWorkingDir": false
+      "requireCleanWorkingDir": true
     },
     "npm": {
       "publish": true
     },
     "github": {
-      "release": false
+      "release": true
     },
     "plugins": {
       "@release-it/conventional-changelog": {
