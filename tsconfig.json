@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "throttles": ["./src/index"]
+      "@coded-lines/throttles": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -23,5 +23,8 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  }
+  },
+  "files": [
+    "./react-native-toasty.d.ts"
+  ]
 }

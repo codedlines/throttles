@@ -1,18 +1,17 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import Throttles from 'throttles';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { showToastLongCenter } from '@coded-lines/throttles';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    Throttles.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => {
+        showToastLongCenter('clicked');
+      }}
+    >
+      <Text>Click me</Text>
+    </TouchableOpacity>
   );
 }
 
