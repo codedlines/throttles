@@ -1,31 +1,17 @@
 import * as React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import { Toast } from '@coded-lines/throttles';
-import { Button } from 'react-native-elements';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import ServiceScreen from './Screens/ServiceScreen';
+
+const bottomTabNavigator = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Button
-        onPress={() => {
-          Toast.showToastLongCenter('Long');
-        }}
-        title="Click for long toast"
-      />
-      <Button
-        onPress={() => {
-          Toast.showToastShortCenter('Short');
-        }}
-        title="Click for short toast"
-      />
-    </SafeAreaView>
+    <NavigationContainer>
+      <bottomTabNavigator.Navigator>
+        <bottomTabNavigator.Screen name="Service" component={ServiceScreen} />
+        {/*<bottomTabNavigator.Screen name="Components" component={SettingsScreen} />*/}
+      </bottomTabNavigator.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
