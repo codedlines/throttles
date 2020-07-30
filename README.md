@@ -7,15 +7,27 @@ React native services and components library
 ```sh
 npm install throttles
 ```
+or
+```sh
+yarn add throttles
+```
+
+### Dependencies
+Install these libraries to your local project
+
+library|version tested
+----|----
+[react-native-toasty](https://github.com/prscX/react-native-toasty)| 1.0.1
 
 ## Usage
-
+### Toast
 ```js
-import Throttles from "throttles";
+import {Toast} from "@coded-lines/throttles";
 
 // ...
 
-const result = await Throttles.multiply(3, 7);
+Toast.showToastShortCenter('message');
+Toast.showToastLongCenter('message');
 ```
 
 ## Contributing

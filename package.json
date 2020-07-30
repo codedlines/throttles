@@ -59,7 +59,7 @@
     "prettier": "^2.0.5",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-toasty": "^1.0.1",
+    "react-native-toasty": "1.0.1",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
   },
