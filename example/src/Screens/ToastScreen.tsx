@@ -1,6 +1,6 @@
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { Button } from 'react-native-elements';
-import { Toast } from '../../../src';
+import { Toast } from '@coded-lines/throttles';
 import * as React from 'react';
 
 export default function ToastDisplay() {
