@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { showToastLongCenter } from '@coded-lines/throttles';
+import { Toast } from '@coded-lines/throttles';
 
 export default function App() {
   return (
     <TouchableOpacity
       style={styles.container}
       onPress={() => {
-        showToastLongCenter('clicked');
+        Toast.showToastLongCenter('clicked');
       }}
     >
       <Text>Click me</Text>

@@ -1,10 +1,10 @@
 import { RNToasty } from 'react-native-toasty';
 
-export function showToastShortCenter(title: string) {
+function showToastShortCenter(title: string) {
   RNToasty.Show({ title, duration: 0, position: 'center' });
 }
 
-export function showToastLongCenter(title: string) {
+function showToastLongCenter(title: string) {
   RNToasty.Show({ title, duration: 1, position: 'center' });
 }
 
