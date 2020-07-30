@@ -144,5 +144,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-native-markdown-renderer": "^3.2.8",
+    "styled-components": "^5.1.1"
+  }
 }
