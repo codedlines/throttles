@@ -1,17 +1,24 @@
 import * as React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { Toast } from '@coded-lines/throttles';
+import { Button } from 'react-native-elements';
 
 export default function App() {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => {
-        Toast.showToastLongCenter('clicked');
-      }}
-    >
-      <Text>Click me</Text>
-    </TouchableOpacity>
+    <SafeAreaView style={styles.container}>
+      <Button
+        onPress={() => {
+          Toast.showToastLongCenter('Long');
+        }}
+        title="Click for long toast"
+      />
+      <Button
+        onPress={() => {
+          Toast.showToastShortCenter('Short');
+        }}
+        title="Click for short toast"
+      />
+    </SafeAreaView>
   );
 }
 
