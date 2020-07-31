@@ -53,6 +53,10 @@ target 'ThrottlesExample' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  # Permissions
+  permissions_path = '../node_modules/react-native-permissions/ios'
+
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
 
   use_native_modules!
 
@@ -61,6 +65,8 @@ target 'ThrottlesExample' do
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
   add_flipper_pods!
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
 
   post_install do |installer|
     flipper_post_install(installer)

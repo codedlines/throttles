@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { TermsAndConditions } from '@coded-lines/throttles';
+import { MapDirections, TermsAndConditions } from '@coded-lines/throttles';
 import { TERMS_AND_CONDITIONS } from '../constants';
 import { ListItem } from 'react-native-elements';
+import { STORE_LOCATION } from '../../../src/constants';
+import { View } from 'react-native';
 
 function TermsAndConditionsRouterHelper() {
   return (
@@ -13,13 +15,25 @@ function TermsAndConditionsRouterHelper() {
   );
 }
 
+function MapDirectionsRouterHelper() {
+  return <MapDirections storeLocation={STORE_LOCATION} />;
+}
+
 function ComponentList({ navigation }) {
-  const goToTermsNConditions = () => {
-    navigation.navigate('Terms and conditions');
+  const navigateTo = (screen) => {
+    return () => {
+      navigation.navigate(screen);
+    };
   };
 
   return (
-    <ListItem title="Terms and conditions" onPress={goToTermsNConditions} />
+    <View>
+      <ListItem
+        title="Terms and conditions"
+        onPress={navigateTo('Terms and conditions')}
+      />
+      <ListItem title="Map directions" onPress={navigateTo('Map directions')} />
+    </View>
   );
 }
 
@@ -31,6 +45,10 @@ export default function ComponentScreen() {
       <stackNavigator.Screen
         name="Terms and conditions"
         component={TermsAndConditionsRouterHelper}
+      />
+      <stackNavigator.Screen
+        name="Map directions"
+        component={MapDirectionsRouterHelper}
       />
     </stackNavigator.Navigator>
   );

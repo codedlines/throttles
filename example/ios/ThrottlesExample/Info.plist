@@ -55,5 +55,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array/>
+  <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Location when in usage permission</string>
 </dict>
 </plist>
