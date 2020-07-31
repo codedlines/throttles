@@ -64,6 +64,10 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
+    "@react-native-community/geolocation": "^2.0.2",
+    "@react-native-mapbox-gl/maps": "^8.1.0-rc.2",
+    "react-native-elements": "^2.0.4",
+    "react-native-permissions": "^2.1.5",
     "react": "*",
     "react-native": "*"
   },
@@ -145,6 +149,8 @@
     "access": "public"
   },
   "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.11.0",
+    "@turf/turf": "^5.1.6",
     "react-native-markdown-renderer": "^3.2.8",
     "styled-components": "^5.1.1"
   }
