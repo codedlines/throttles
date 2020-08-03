@@ -32,3 +32,7 @@ export const ToastMessages = {
   STORAGE_SAVE_SUCCESS: 'Your changes have been saved',
   STORAGE_SAVE_FAILURE: 'Your changes could not be saved',
 };
+
+export const StorageKeys = {
+  PRIVACY_CENTER: 'privacyCenter',
+};

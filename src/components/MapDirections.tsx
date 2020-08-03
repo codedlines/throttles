@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
 import { Button } from 'react-native-elements';
 import MapboxGL, { CameraSettings } from '@react-native-mapbox-gl/maps';
 import { point } from '@turf/helpers';
@@ -132,8 +131,8 @@ function MapDirections({ storeLocation }) {
   };
 
   return (
-    <View style={{ flex: 1 }}>
-      <MapboxGL.MapView style={{ flex: 1 }}>
+    <ViewWrapperSC>
+      <MapView>
         <Camera originPoint={originPoint} destinationPoint={destinationPoint} />
         <Origin originPoint={originPoint} />
         <Route route={route} />
@@ -141,9 +140,9 @@ function MapDirections({ storeLocation }) {
           id="destinationInnerCircle"
           coordinate={destinationPoint}
         />
-      </MapboxGL.MapView>
+      </MapView>
       <Actions onPress={getDirections} />
-    </View>
+    </ViewWrapperSC>
   );
 }
 
@@ -175,3 +174,11 @@ const ViewSC = styled.View`
 const ButtonSC = styled(Button).attrs({
   buttonStyle: { backgroundColor: color.common.BTN_BACKGROUND },
 })``;
+
+const ViewWrapperSC = styled.View`
+  flex: 1;
+`;
+
+const MapView = styled(MapboxGL.MapView)`
+  flex: 1;
+`;

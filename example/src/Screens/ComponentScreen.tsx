@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { MapDirections, TermsAndConditions } from '@coded-lines/throttles';
-import { TERMS_AND_CONDITIONS } from '../constants';
+import {
+  GdprDataList,
+  MapDirections,
+  TermsAndConditions,
+} from '@coded-lines/throttles';
 import { ListItem } from 'react-native-elements';
-import { store } from '../../../src/constants';
+import { store, getGdprListData, TERMS_AND_CONDITIONS } from '../constants';
 import { View } from 'react-native';
 import { Contact } from '@coded-lines/throttles';
 
@@ -54,8 +57,13 @@ function ComponentList({ navigation }) {
         title="Ways of contact"
         onPress={navigateTo('Ways of contact')}
       />
+      <ListItem title="Privacy center" onPress={navigateTo('Privacy center')} />
     </View>
   );
+}
+
+function GdprSublistRouterHelper() {
+  return <GdprDataList listData={getGdprListData().privacyCenter} />;
 }
 
 export default function ComponentScreen() {
@@ -74,6 +82,10 @@ export default function ComponentScreen() {
       <stackNavigator.Screen
         name="Ways of contact"
         component={ContactRouterHelper}
+      />
+      <stackNavigator.Screen
+        name="Privacy center"
+        component={GdprSublistRouterHelper}
       />
     </stackNavigator.Navigator>
   );
