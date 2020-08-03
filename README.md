@@ -67,6 +67,21 @@ function MwD() {
   return <MapDirections storeLocation={STORE_LOCATION} />;
 }
 ```
+### Ways of contact
+```js
+function Cnt() {
+  const onLocationClick = ...
+
+  return (
+    <Contact
+      onLocationClick={onLocationClick}
+      phoneNumber={PHONE_NUMBER}
+      locationText={LOCATION_TEXT}
+    />
+  );
+}
+```
+
 
 ## Contributing
 
