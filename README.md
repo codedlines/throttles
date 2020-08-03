@@ -22,6 +22,7 @@ library|version tested
 [@react-native-mapbox-gl/maps](https://github.com/react-native-mapbox-gl/maps)| 8.1.0-rc.2
 [react-native-elements](https://github.com/react-native-elements/react-native-elements)| 2.0.4
 [react-native-permissions](https://github.com/react-native-community/react-native-permissions)| 2.1.5
+[@react-native-community/async-storage](https://react-native-community.github.io/async-storage/)| 1.11.0
 
 ## Usage
 ### Toast
@@ -67,8 +68,11 @@ function MwD() {
   return <MapDirections storeLocation={STORE_LOCATION} />;
 }
 ```
+
 ### Ways of contact
 ```js
+import { Contact } from '@coded-lines/throttles';
+
 function Cnt() {
   const onLocationClick = ...
 
@@ -82,6 +86,15 @@ function Cnt() {
 }
 ```
 
+### Gdpr
+```js
+import { GdprList } from '@coded-lines/throttles';
+
+function Gdpr() {
+  return <GdprList listData={getGdprListData().privacyCenter} />;
+}
+
+```
 
 ## Contributing
 
