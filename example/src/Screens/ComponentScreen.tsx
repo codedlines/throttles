@@ -3,8 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { MapDirections, TermsAndConditions } from '@coded-lines/throttles';
 import { TERMS_AND_CONDITIONS } from '../constants';
 import { ListItem } from 'react-native-elements';
-import { STORE_LOCATION } from '../../../src/constants';
+import { store } from '../../../src/constants';
 import { View } from 'react-native';
+import { Contact } from '@coded-lines/throttles';
 
 function TermsAndConditionsRouterHelper() {
   return (
@@ -16,7 +17,23 @@ function TermsAndConditionsRouterHelper() {
 }
 
 function MapDirectionsRouterHelper() {
-  return <MapDirections storeLocation={STORE_LOCATION} />;
+  return <MapDirections storeLocation={store.STORE_LOCATION} />;
+}
+
+function ContactRouterHelper({ navigate }) {
+  const onLocationClick = () => {
+    return () => {
+      navigate.navigation('Map Directions');
+    };
+  };
+
+  return (
+    <Contact
+      onLocationClick={onLocationClick}
+      phoneNumber={store.PHONE_NUMBER}
+      locationText={store.LOCATION_TEXT}
+    />
+  );
 }
 
 function ComponentList({ navigation }) {
@@ -33,6 +50,10 @@ function ComponentList({ navigation }) {
         onPress={navigateTo('Terms and conditions')}
       />
       <ListItem title="Map directions" onPress={navigateTo('Map directions')} />
+      <ListItem
+        title="Ways of contact"
+        onPress={navigateTo('Ways of contact')}
+      />
     </View>
   );
 }
@@ -49,6 +70,10 @@ export default function ComponentScreen() {
       <stackNavigator.Screen
         name="Map directions"
         component={MapDirectionsRouterHelper}
+      />
+      <stackNavigator.Screen
+        name="Ways of contact"
+        component={ContactRouterHelper}
       />
     </stackNavigator.Navigator>
   );
