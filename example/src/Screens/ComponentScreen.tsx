@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import {
   GdprDataList,
+  Login,
   MapDirections,
   TermsAndConditions,
 } from '@coded-lines/throttles';
@@ -58,12 +59,17 @@ function ComponentList({ navigation }) {
         onPress={navigateTo('Ways of contact')}
       />
       <ListItem title="Privacy center" onPress={navigateTo('Privacy center')} />
+      <ListItem title="Login" onPress={navigateTo('Login')} />
     </View>
   );
 }
 
 function GdprSublistRouterHelper() {
   return <GdprDataList listData={getGdprListData().privacyCenter} />;
+}
+
+function LoginRouterHelper() {
+  return <Login onSubmit={console.log} />;
 }
 
 export default function ComponentScreen() {
@@ -87,6 +93,7 @@ export default function ComponentScreen() {
         name="Privacy center"
         component={GdprSublistRouterHelper}
       />
+      <stackNavigator.Screen name="Login" component={LoginRouterHelper} />
     </stackNavigator.Navigator>
   );
 }

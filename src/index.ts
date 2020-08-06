@@ -7,6 +7,7 @@ import termsAndConditions from './components/TermsAndConditions';
 import mapDirections from './components/MapDirections';
 import contact from './components/Contact';
 import gdprList from './components/GdprList';
+import login from './components/Login';
 
 export const Toast = toast;
 
@@ -19,3 +20,5 @@ export const MapBoxClient = mapBoxClient;
 export const Contact = contact;
 
 export const GdprDataList = gdprList;
+
+export const Login = login;

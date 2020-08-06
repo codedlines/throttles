@@ -21,6 +21,7 @@ export const buttonNames = {
   ACCEPT_ALL: 'Accept all',
   DENY_ALL: 'Deny all',
   SAVE: 'Save',
+  SUBMIT: 'Submit',
 };
 
 export const ToastMessages = {
@@ -35,4 +36,14 @@ export const ToastMessages = {
 
 export const StorageKeys = {
   PRIVACY_CENTER: 'privacyCenter',
+};
+
+export const validationMessages = {
+  required: 'Mandatory field',
+  email: 'Invalid email format',
+};
+
+export const inputPlaceholders = {
+  EMAIL: 'Email',
+  PASSWORD: 'Password',
 };
