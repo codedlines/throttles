@@ -5,6 +5,9 @@ import ServiceScreen from './Screens/ServiceScreen';
 import ComponentScreen from './Screens/ComponentScreen';
 import Config from 'react-native-config';
 import { MapBoxClient } from '@coded-lines/throttles';
+import { YellowBox } from 'react-native';
+
+YellowBox.ignoreWarnings(['Expected style']);
 
 MapBoxClient.initMapbox(Config.MAPBOX_GL_ACCESS_TOKEN);
 
