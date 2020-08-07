@@ -1,6 +1,6 @@
 {
   "name": "@coded-lines/throttles",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "React native services and components library",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
